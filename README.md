@@ -1,4 +1,4 @@
-````md id="readme92"
+
 # Playwright API Framework Agent
 
 ![Playwright](https://img.shields.io/badge/Playwright-API_Testing-green?logo=playwright)
@@ -334,6 +334,3 @@ The architecture is intentionally modular to support future multi-framework adap
 # Author
 
 Bhavesh Rathod
-
-```
-```
