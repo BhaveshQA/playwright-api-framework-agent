@@ -248,15 +248,25 @@ Resolved using:
 # Sample Generated Flow
 
 ```text
-Postman Collection
-        ↓
-Parser extracts intelligence
-        ↓
-Mapper aligns with framework
-        ↓
-Generator creates Playwright code
-        ↓
-Generated API tests run successfully
+Existing Playwright Framework
+            ↓
+Framework Analyzer
+            ↓
+Framework Summary
+            ↓
+Postman Collection Parser
+            ↓
+Postman Intelligence
+            ↓
+Framework Mapper
+            ↓
+Framework-Aligned Generation Map
+            ↓
+Code Generator
+            ↓
+Generated Playwright Framework Code
+            ↓
+Generated API Tests Execution
 ```
 
 ---
