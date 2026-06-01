@@ -1,0 +1,69 @@
+{
+  "frameworkIdentity": {
+    "frameworkType": "Playwright API Automation Framework",
+    "architectureStyle": "Layered Architecture",
+    "sourceOfTruth": "Existing framework implementation"
+  },
+  "generationStrategy": {
+    "serviceSignatureStyle": "explicitArguments",
+    "apiRequestStyle": "simple",
+    "endpointStyle": "replaceVariables",
+    "payloadStrategy": "onlyWhenRequired"
+  },
+  "modules": [
+    {
+      "moduleName": "Sponsors",
+      "serviceName": "SponsorsService",
+      "servicePath": "services/SponsorsService.js",
+      "testPath": "tests/Sponsors",
+      "payloadPath": "payloads/Sponsors",
+      "endpoints": [
+        {
+          "endpointName": "Sponsors catalog - MOB",
+          "methodName": "sponsorsCatalogMOB",
+          "endpointConstant": "SPONSORS_CATALOG_MOB",
+          "method": "GET",
+          "path": "/events/${eventId}/sponsorship/catalog",
+          "pathVariables": [
+            "eventId"
+          ],
+          "queryVariables": [
+            "deviceId"
+          ],
+          "headerVariables": [
+            "x-api-key",
+            "userID",
+            "Outh2token",
+            "x-device-id"
+          ],
+          "runtimeVariableClassification": {
+            "eventId": "environment",
+            "deviceId": "dynamicGenerated",
+            "x-api-key": "environment",
+            "userID": "environment",
+            "Outh2token": "environment",
+            "x-device-id": "environment"
+          },
+          "dynamicRuntimeVariables": [
+            "deviceId"
+          ],
+          "methodArguments": [
+            "request",
+            "eventId",
+            "deviceId"
+          ],
+          "requiresPayload": false,
+          "payload": null,
+          "statusAssertions": [
+            200
+          ],
+          "testAssertions": [
+            "Sponsors catalog - MOB",
+            "Schema is valid"
+          ]
+        }
+      ],
+      "payloads": []
+    }
+  ]
+}

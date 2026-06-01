@@ -1,0 +1,140 @@
+{
+  "frameworkIdentity": {
+    "frameworkType": "Playwright API Automation Framework",
+    "architectureStyle": "Layered Architecture",
+    "sourceOfTruth": "Existing framework implementation"
+  },
+  "folderStructure": {
+    "services": "services/",
+    "tests": "tests/",
+    "payloads": "payloads/",
+    "utils": "utils/",
+    "schemas": "schemas/",
+    "config": "config/"
+  },
+  "subFolders": {
+    "services": [],
+    "tests": [
+      "AgendaBuilder",
+      "Catalog",
+      "EventList"
+    ],
+    "payloads": [
+      "agendaBuilder"
+    ],
+    "utils": [],
+    "schemas": [],
+    "config": []
+  },
+  "endpointPatterns": {
+    "centralized": true,
+    "usesTemplateVariables": true,
+    "exportStyle": true
+  },
+  "assertionPatterns": {
+    "centralizedAssertions": true,
+    "validatesStatus": true,
+    "validatesResponseTime": true
+  },
+  "importPatterns": {
+    "serviceImportStyle": "../services/",
+    "utilityImportStyle": "../utils/",
+    "payloadImportStyle": "../payloads/"
+  },
+  "architectureRules": {
+    "generatorMustStudyRealCode": true,
+    "generatorMustFollowExistingStyle": true,
+    "generatorMustNotInventArchitecture": true,
+    "generatorMustReuseUtilities": true,
+    "generatorMustMirrorMethodSignatures": true,
+    "generatorMustGenerateMinimalCode": true,
+    "generatorMustOnlyUsePayloadsWhenRequired": true,
+    "generatorMustAvoidGenericRuntimeAbstractions": true
+  },
+  "frameworkStyle": {
+    "usesMinimalMethods": true,
+    "usesExplicitArguments": true,
+    "usesSimpleApiRequest": true,
+    "usesDirectEndpointReplacement": true,
+    "usesPayloadOnlyWhenRequired": true
+  },
+  "generationStrategy": {
+    "serviceSignatureStyle": "explicitArguments",
+    "apiRequestStyle": "simple",
+    "endpointStyle": "replaceVariables",
+    "payloadStrategy": "onlyWhenRequired"
+  },
+  "servicePatterns": {
+    "totalServices": 3,
+    "services": [
+      {
+        "fileName": "AgendaBuilderService.js",
+        "methods": [
+          {
+            "methodName": "getSessionsToRate",
+            "parameters": [
+              "request",
+              "payload"
+            ]
+          }
+        ],
+        "usesPayload": true,
+        "usesEndpointReplace": false,
+        "usesSimpleRequest": true
+      },
+      {
+        "fileName": "CatalogService.js",
+        "methods": [
+          {
+            "methodName": "fetchSignedURL",
+            "parameters": [
+              "request"
+            ]
+          },
+          {
+            "methodName": "fetchCatalogData",
+            "parameters": [
+              "request"
+            ]
+          },
+          {
+            "methodName": "getSessionDetails",
+            "parameters": [
+              "request",
+              "sessionId"
+            ]
+          },
+          {
+            "methodName": "extractFirstSessionId",
+            "parameters": [
+              "request"
+            ]
+          }
+        ],
+        "usesPayload": false,
+        "usesEndpointReplace": true,
+        "usesSimpleRequest": true
+      },
+      {
+        "fileName": "EventService.js",
+        "methods": [
+          {
+            "methodName": "getAllEvents",
+            "parameters": [
+              "request"
+            ]
+          }
+        ],
+        "usesPayload": false,
+        "usesEndpointReplace": false,
+        "usesSimpleRequest": true
+      }
+    ]
+  },
+  "testPatterns": {
+    "totalTests": 5,
+    "usesPlaywright": true,
+    "usesCommonAssertions": true,
+    "parsesJson": true
+  }
+}

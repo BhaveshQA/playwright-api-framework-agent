@@ -1,0 +1,84 @@
+{
+  "frameworkExtensionMode": true,
+  "collectionName": "Playwright Agent Automation",
+  "modules": [
+    {
+      "folderName": "Sponsors",
+      "endpoints": [
+        {
+          "name": "Sponsors catalog - MOB",
+          "method": "GET",
+          "rawUrl": "{{apiUrl}}/events/{{eventId}}/sponsorship/catalog?deviceId={{deviceId}}",
+          "path": "/events/{{eventId}}/sponsorship/catalog",
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "ver=1.0",
+              "type": "text"
+            },
+            {
+              "key": "x-api-key",
+              "value": "{{x-api-key}}",
+              "type": "text"
+            },
+            {
+              "key": "x-attendee-id",
+              "value": "{{userID}}",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "Authorization",
+              "value": "{{Outh2token}}",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "x-device-id",
+              "value": "{{x-device-id}}",
+              "type": "text"
+            }
+          ],
+          "payload": null,
+          "requiresPayload": false,
+          "pathVariables": [
+            "eventId"
+          ],
+          "queryVariables": [
+            "deviceId"
+          ],
+          "headerVariables": [
+            "x-api-key",
+            "userID",
+            "Outh2token",
+            "x-device-id"
+          ],
+          "bodyVariables": [],
+          "variablesUsed": [
+            "eventId",
+            "deviceId",
+            "x-api-key",
+            "userID",
+            "Outh2token",
+            "x-device-id"
+          ],
+          "runtimeVariableClassification": {
+            "eventId": "environment",
+            "deviceId": "dynamicGenerated",
+            "x-api-key": "environment",
+            "userID": "environment",
+            "Outh2token": "environment",
+            "x-device-id": "environment"
+          },
+          "statusAssertions": [
+            200
+          ],
+          "testAssertions": [
+            "Sponsors catalog - MOB",
+            "Schema is valid"
+          ]
+        }
+      ]
+    }
+  ]
+}
